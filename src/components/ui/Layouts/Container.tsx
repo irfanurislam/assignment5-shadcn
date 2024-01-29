@@ -8,12 +8,7 @@ type TcontainerProps = {
 
 const Container = ({ children, className }: TcontainerProps) => {
   return (
-    <div
-      className={cn(
-        "w-full px-[20px] border border-red-500 max-w-[1230px] mx-auto ",
-        className
-      )}
-    >
+    <div className={cn("w-full px-[20px]  max-w-[1230px] mx-auto ", className)}>
       {children}
     </div>
   );

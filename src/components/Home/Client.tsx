@@ -13,21 +13,21 @@ const Client = () => {
   return (
     <div>
       <div>
-        <h1 className="text-6xl font-extrabold text-black">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-black truncate">
           Our Valuable client
         </h1>
       </div>
-      <div className="grid grid-cols-5 gap-5 mt-20 justify-items-center">
-        <img src={Vector9} alt="" />
-        <img src={Vector} alt="" />
-        <img src={vector1} alt="" />
-        <img src={vector2} alt="" />
-        <img src={vector3} alt="" />
-        <img src={vector4} alt="" />
-        <img src={vector5} alt="" />
-        <img src={vector6} alt="" />
-        <img src={vector7} alt="" />
-        <img src={vector8} alt="" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-10 justify-items-center">
+        <img className="max-w-full" src={Vector9} alt="" />
+        <img className="max-w-full" src={Vector} alt="" />
+        <img className="max-w-full" src={vector1} alt="" />
+        <img className="max-w-full" src={vector2} alt="" />
+        <img className="max-w-full" src={vector3} alt="" />
+        <img className="max-w-full" src={vector4} alt="" />
+        <img className="max-w-full" src={vector5} alt="" />
+        <img className="max-w-full" src={vector6} alt="" />
+        <img className="max-w-full" src={vector7} alt="" />
+        <img className="max-w-full" src={vector8} alt="" />
       </div>
     </div>
   );
