@@ -41,18 +41,18 @@ const ServiceCard = () => {
       {cardsArray.map((card) => (
         <div
           key={card.id}
-          className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md"
+          className="max-w-[412px] h-[569px] mx-auto p-5 bg-[#EBD7EF] rounded-xl overflow-hidden shadow-md"
         >
           <img
             className="w-full h-48 object-cover"
             src={card.image}
             alt="Event"
           />
-          <div className="p-4">
+          <div className="pt-4">
             <h2 className="text-3xl font-bold mb-2">{card.title}</h2>
             <ul className="list-none">
               {card.description.map((desc, index) => (
-                <li key={index} className="flex items-center">
+                <li key={index} className="flex items-center py-2">
                   {/* Unicode checkmark character */}
 
                   <span className="text-green-500 mr-2">&#x2713;</span>
@@ -63,12 +63,12 @@ const ServiceCard = () => {
           </div>
         </div>
       ))}
-      <Card className="max-w-md">
+      <Card className="max-w-[412px] h-[569px] overflow-hidden border-none  bg-[#C3EDEA] p-5">
         <CardHeader>
-          <CardTitle>
+          <CardTitle className="text-start">
             <h2 className="text-3xl font-bold mb-2">Wedding event</h2>
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-start">
             {" "}
             <p className="text-lg max-w-[40ch] text-black mt-4">
               Ut posuere felis arcu tellus tempus in in ultricies. Gravida id
@@ -78,15 +78,17 @@ const ServiceCard = () => {
             </p>
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <ul className="list-disc">
+        <CardContent className="text-start">
+          <ul className="list-none">
             <li>One day pas access all lecture</li>
             <li>One day pas access all lecture</li>
             <li>One day pas access all lecture</li>
             <li>One day pas access all lecture</li>
             <li>One day pas access all lecture</li>
           </ul>
-          <Button className="w-full">Check Full</Button>
+          <div className="mt-6">
+            <Button className="w-full">Check Full</Button>
+          </div>
         </CardContent>
       </Card>
     </div>
