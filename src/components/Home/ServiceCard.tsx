@@ -1,13 +1,14 @@
 import card1 from "../../assets/card/card1.png";
 import card2 from "../../assets/card/card2.png";
-import { Button } from "../ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import icon from "../../assets/card/icon.png";
+// import { Button } from "../ui/button";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
 const ServiceCard = () => {
   const cardsArray = [
     {
@@ -34,14 +35,26 @@ const ServiceCard = () => {
         "One day pass access all lecture",
       ],
     },
+    {
+      id: 3,
+      title: "Weeding event",
+      image: card2,
+      description: [
+        "One day pass access all lecture",
+        "One day pass access all lecture",
+        "One day pass access all lecture",
+        "One day pass access all lecture",
+        "One day pass access all lecture",
+      ],
+    },
     // Add more events as needed
   ];
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 gap-5">
       {cardsArray.map((card) => (
         <div
           key={card.id}
-          className="max-w-[412px] h-[569px] mx-auto p-5 bg-[#EBD7EF] rounded-xl overflow-hidden shadow-md"
+          className="w-[350px] h-[569px] mx-auto p-5 bg-[#EBD7EF] rounded-xl overflow-hidden shadow-md"
         >
           <img
             className="w-full h-48 object-cover"
@@ -49,13 +62,15 @@ const ServiceCard = () => {
             alt="Event"
           />
           <div className="pt-4">
-            <h2 className="text-3xl font-bold mb-2">{card.title}</h2>
+            <h2 className="text-3xl font-bold mb-2 text-start">{card.title}</h2>
             <ul className="list-none">
               {card.description.map((desc, index) => (
                 <li key={index} className="flex items-center py-2">
                   {/* Unicode checkmark character */}
 
-                  <span className="text-green-500 mr-2">&#x2713;</span>
+                  <span className="text-green-500 mr-3">
+                    <img src={icon} alt="" />
+                  </span>
                   {desc}
                 </li>
               ))}
@@ -63,7 +78,13 @@ const ServiceCard = () => {
           </div>
         </div>
       ))}
-      <Card className="max-w-[412px] h-[569px] overflow-hidden border-none  bg-[#C3EDEA] p-5">
+    </div>
+  );
+};
+
+export default ServiceCard;
+{
+  /* <Card className="max-w-[412px] h-[569px] overflow-hidden border-none  bg-[#C3EDEA] p-5">
         <CardHeader>
           <CardTitle className="text-start">
             <h2 className="text-3xl font-bold mb-2">Wedding event</h2>
@@ -90,9 +111,5 @@ const ServiceCard = () => {
             <Button className="w-full">Check Full</Button>
           </div>
         </CardContent>
-      </Card>
-    </div>
-  );
-};
-
-export default ServiceCard;
+      </Card> */
+}
