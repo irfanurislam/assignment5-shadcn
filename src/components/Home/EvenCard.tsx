@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-// import useScrolGrow from "@/hook/useScrollGrow";
-// import { motion } from "framer-motion";
 
 type TEvent = {
   event: {
@@ -11,8 +9,6 @@ type TEvent = {
 };
 
 const EventCard = ({ event, index }: TEvent) => {
-  //   const { ref, scaleV } = useScrolGrow();
-
   return (
     <div
       //   ref={ref}
