@@ -17,10 +17,10 @@ const ServiceCard = () => {
       image: card1,
       description: [
         "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
+        "Lunch and Snack",
+        "Meet Event Speaker",
+        "Front Seat",
+        "One day pas access all lecture",
       ],
     },
     {
@@ -29,10 +29,10 @@ const ServiceCard = () => {
       image: card2,
       description: [
         "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
+        "Lunch and Snack",
+        "Meet Event Speaker",
+        "Front Seat",
+        "One day pas access all lecture",
       ],
     },
     {
@@ -41,16 +41,16 @@ const ServiceCard = () => {
       image: card2,
       description: [
         "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
-        "One day pass access all lecture",
+        "Lunch and Snack",
+        "Meet Event Speaker",
+        "Front Seat",
+        "One day pas access all lecture",
       ],
     },
     // Add more events as needed
   ];
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
       {cardsArray.map((card) => (
         <div
           key={card.id}
