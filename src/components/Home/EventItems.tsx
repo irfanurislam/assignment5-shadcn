@@ -1,47 +1,55 @@
 import useTitle from "@/hooks/useTitle";
 
+import eventImg1 from "../../assets/eventimg/img1.png";
+import eventImg2 from "../../assets/eventimg/img2.png";
+import eventImg3 from "../../assets/eventimg/img3.png";
+import eventImg4 from "../../assets/eventimg/img4.png";
+import eventImg5 from "../../assets/eventimg/img5.png";
+import eventImg6 from "../../assets/eventimg/img6.png";
+import EventCard from "./EvenCard";
 const EventItems = () => {
   const titleProps = {
     heading: "Event Items",
     subHeading:
       "Ut posuere felis arcu tellus tempus in in ultricies. Gravida id nibh ornare viverra. Ultrices faucibus neque velit risus ac id lorem",
   };
+
+  const events = [
+    {
+      image: eventImg1,
+      eventName: "Event item - 1",
+    },
+    {
+      image: eventImg2,
+      eventName: "Event item - 2",
+    },
+    {
+      image: eventImg3,
+      eventName: "Event item - 3",
+    },
+    {
+      image: eventImg4,
+      eventName: "Event item - 4",
+    },
+    {
+      image: eventImg5,
+      eventName: "Event item - 5",
+    },
+    {
+      image: eventImg6,
+      eventName: "Event item - 6",
+    },
+  ];
+
   return (
     <div>
       <div>{useTitle(titleProps)}</div>
 
-      {/* <div>
-        <div className="grid grid-cols-3 grid-rows-2 md:gap-4 h-screen  gap-[20px]">
-          <div className="bg-red-500 h-[415px] rounded-2xl col-span-2"></div>
-          <div className="bg-red-500 h-[415px] rounded-2xl col-span-2"></div>
-          <div className="bg-red-500 h-[415px] rounded-2xl col-span-2 row-span-2 "></div>
-          <div className="bg-red-500 h-[415px] rounded-2xl col-span-1"></div>
-          <div className="bg-red-500 h-[415px] rounded-2xl col-span-1"></div>
-        </div>
-      </div> */}
-
-      {/* <div className="h-screen">
-        <div className="grid grid-cols-2 grid-rows-3 md:grid-rows-4 md:grid-cols-4 gap-2 md:gap-4 h-screen">
-          <div className="bg-indigo-100 col-span-1 md:col-span-2">
-            <span>01</span>
-          </div>
-          <div className="bg-fuchsia-100 col-span-1 md:col-span-2 row-span-1 md:row-span-2">
-            <span>02</span>
-          </div>
-          <div className="bg-purple-100 col-span-1 md:col-span-2">
-            <span>03</span>
-          </div>
-          <div className="bg-violet-100">
-            <span>04</span>
-          </div>
-          <div className="bg-sky-100">
-            <span>05</span>
-          </div>
-          <div className="bg-emerald-100 col-span-1 md:col-span-2">
-            <span>06</span>
-          </div>
-        </div>
-      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 place-items-center lg:grid-rows-2 gap-5  lg:max-h-[576px] h-full ">
+        {events.map((event, index) => (
+          <EventCard index={index} event={event} key={index} />
+        ))}
+      </div>
     </div>
   );
 };
